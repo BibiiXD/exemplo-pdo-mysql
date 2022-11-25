@@ -6,7 +6,7 @@ $bd = new MySQLConnection();//PDO('mysql:host=localhost;dbname=biblioteca', 'roo
 
 $comando = $bd -> prepare('SELECT * FROM generos');
 $comando -> execute();
-$generos = $comando -> fetchAll (PDO::FETCH_ASSOC);
+$generos = $comando -> fetchAll (PDO::FETCH_ASSOC); //fetch-retorna um vetor 
 
 $_title = 'Gêneros';
 
@@ -19,7 +19,7 @@ $_title = 'Gêneros';
         <tr>
             <th>Id</th>
             <th>Nome</th>
-            <th>&nbsp;</th>
+            <th>&nbsp;</th> <!-- dá um espaço -->
         </tr>
 <?php foreach($generos as $g): ?>   
     <tr> 
